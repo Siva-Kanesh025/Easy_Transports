@@ -15,7 +15,7 @@ const QuotePage = () => {
   const { toast } = useToast();
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [_isSubmitting, setIsSubmitting] = useState(false);
   const formAnimation = useScrollAnimation({ threshold: 0.1 });
   
   const [formData, setFormData] = useState({
