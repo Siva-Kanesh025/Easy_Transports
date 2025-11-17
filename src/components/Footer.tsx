@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2 group cursor-pointer">
               <Truck className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300" />
-              <span className="text-lg font-bold">London Vehicle Services</span>
+              <span className="text-lg font-bold">Easy Transporter</span>
             </div>
             <p className="text-sm text-background/80">
               Reliable vehicle services across London. House moving, pallet removals, skip removals, and man & van services.
@@ -65,7 +65,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2 text-sm text-background/80">
                 <Mail className="h-4 w-4" />
-                <span>info@transporterking.com</span>
+                <span>info@easytransporter.com</span>
               </li>
               <li className="flex items-center space-x-2 text-sm text-background/80">
                 <MapPin className="h-4 w-4" />
@@ -91,7 +91,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-background/20 mt-8 pt-8 text-center">
           <p className="text-sm text-background/80">
-            © {new Date().getFullYear()} Transporter King Services. All rights reserved.
+            © {new Date().getFullYear()} Global Tamil Technologies Limited. All rights reserved.
           </p>
         </div>
       </div>

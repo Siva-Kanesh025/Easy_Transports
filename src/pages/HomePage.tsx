@@ -4,10 +4,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../co
 import {Zap, Shield, MapPin, ArrowRight, Clock, DollarSign, ThumbsUp } from "lucide-react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import heroVan from "../assets/hero-van.jpg";
-import houseMovingIcon from "../assets/house-moving-icon.jpg";
-import palletIcon from "../assets/pallet-icon.jpg";
-import skipIcon from "../assets/skip-icon.jpg";
-import manVanIcon from "../assets/man-van-icon.jpg";
+import houseMovingIcon from "../assets/house_moving.jpg";
+import palletIcon from "../assets/pallet_removals.jpg";
+import skipIcon from "../assets/skip_removals.jpg";
+import manVanIcon from "../assets/man_van.jpg";
+import bulkIcon from "../assets/bulk_removals.jpg";
+import courierIcon from "../assets/courier_service.jpg";
 
 const HomePage = () => {
   const servicesSection = useScrollAnimation({ threshold: 0.1 });
@@ -33,6 +35,18 @@ const HomePage = () => {
       description: "Fast and reliable skip waste removal services",
       icon: skipIcon,
       link: "/quote",
+    },
+    {
+        title: "Bulk Removals",
+        description: "Efficient bulk waste removal for households and businesses",
+        icon: bulkIcon,
+        link: "/quote",
+    },
+    {
+        title: "Courier Services",
+        description: "Quick and secure courier deliveries across the city",
+        icon: courierIcon,
+        link: "/quote",
     },
     {
       title: "Man & Van",

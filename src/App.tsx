@@ -10,6 +10,7 @@ import QuotePage from "./pages/QuotePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-1">
+            <ScrollToTop />
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/quote" element={<QuotePage />} />

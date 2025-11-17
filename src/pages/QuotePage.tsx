@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
-//import { Skeleton } from "../components/ui/skeleton";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
 import { Textarea } from "../components/ui/textarea";
@@ -59,7 +58,7 @@ const QuotePage = () => {
     setSubmitted(true);
     toast({
       title: "Quote Requested!",
-      description: "We'll get back to you within 24 hours.",
+      description: "We'll get back to you within 3 hours.",
     });
   };
 
@@ -162,6 +161,8 @@ const QuotePage = () => {
                       <SelectContent>
                         <SelectItem value="house-moving">House Moving</SelectItem>
                         <SelectItem value="pallet-removals">Pallet Removals</SelectItem>
+                        <SelectItem value="pallet-removals">Bulk Removals</SelectItem>
+                        <SelectItem value="pallet-removals">Courier Services</SelectItem>
                         <SelectItem value="skip-removals">Skip Removals</SelectItem>
                         <SelectItem value="man-van">Man & Van</SelectItem>
                       </SelectContent>
