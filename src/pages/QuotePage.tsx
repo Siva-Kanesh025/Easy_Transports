@@ -201,13 +201,21 @@ const QuotePage = () => {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="time">Preferred Time</Label>
-                      <Input
-                        id="time"
-                        type="time"
-                        value={formData.time}
-                        onChange={(e) => handleInputChange("time", e.target.value)}
-                      />
+                        <Label htmlFor="serviceType">Preferred Time *</Label>
+                        <Select 
+                        value={formData.serviceType} 
+                        onValueChange={(value) => handleInputChange("serviceType", value)}
+                        >
+                        <SelectTrigger className="transition-all duration-300 hover:scale-105">
+                            <SelectValue placeholder="Select a preferred time" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectItem value="house-moving">Morning Hours</SelectItem>
+                            <SelectItem value="pallet-removals">Afternoon Hours</SelectItem>
+                            <SelectItem value="pallet-removals">Evening Hours</SelectItem>
+                            <SelectItem value="pallet-removals">Night Hours</SelectItem>
+                        </SelectContent>
+                        </Select>
                     </div>
                   </div>
 
