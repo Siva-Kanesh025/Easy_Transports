@@ -59,8 +59,8 @@ const ContactPage = () => {
     {
       icon: Mail,
       title: "Email",
-      detail: "info@transporterking.com",
-      link: "mailto:info@transporterking.com",
+      detail: "info@easytransporter.com",
+      link: "mailto:info@easytransporter.com",
     },
     {
       icon: MapPin,
@@ -247,8 +247,8 @@ const ContactPage = () => {
                       <Mail className="h-5 w-5 text-primary flex-shrink-0" />
                       <div>
                         <p className="font-medium">Email</p>
-                        <a href="mailto:info@londonvehicle.com" className="text-sm text-muted-foreground hover:text-primary">
-                          info@transporterking.com
+                        <a href="mailto:info@easytransporter.com" className="text-sm text-muted-foreground hover:text-primary">
+                          info@easytransporter.com
                         </a>
                       </div>
                     </div>
