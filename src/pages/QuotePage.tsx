@@ -22,6 +22,7 @@ const QuotePage = () => {
     pickupPostcode: "",
     dropoffPostcode: "",
     date: "",
+    preferredTime: "",
     time: "",
     needHelpers: false,
     name: "",
@@ -161,8 +162,8 @@ const QuotePage = () => {
                       <SelectContent>
                         <SelectItem value="house-moving">House Moving</SelectItem>
                         <SelectItem value="pallet-removals">Pallet Removals</SelectItem>
-                        <SelectItem value="pallet-removals">Bulk Removals</SelectItem>
-                        <SelectItem value="pallet-removals">Courier Services</SelectItem>
+                        <SelectItem value="bulk-removals">Bulk Removals</SelectItem>
+                        <SelectItem value="courier-services">Courier Services</SelectItem>
                         <SelectItem value="skip-removals">Skip Removals</SelectItem>
                         <SelectItem value="man-van">Man & Van</SelectItem>
                       </SelectContent>
@@ -203,17 +204,17 @@ const QuotePage = () => {
                     <div className="space-y-2">
                         <Label htmlFor="serviceType">Preferred Time *</Label>
                         <Select 
-                        value={formData.serviceType} 
-                        onValueChange={(value) => handleInputChange("serviceType", value)}
+                          value={formData.preferredTime}
+                          onValueChange={(value) => handleInputChange("preferredTime", value)}
                         >
                         <SelectTrigger className="transition-all duration-300 hover:scale-105">
                             <SelectValue placeholder="Select a preferred time" />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="house-moving">Morning Hours</SelectItem>
-                            <SelectItem value="pallet-removals">Afternoon Hours</SelectItem>
-                            <SelectItem value="pallet-removals">Evening Hours</SelectItem>
-                            <SelectItem value="pallet-removals">Night Hours</SelectItem>
+                            <SelectItem value="morning-hours">Morning Hours</SelectItem>
+                            <SelectItem value="afternoon-hours">Afternoon Hours</SelectItem>
+                            <SelectItem value="evening-hours">Evening Hours</SelectItem>
+                            <SelectItem value="night-hours">Night Hours</SelectItem>
                         </SelectContent>
                         </Select>
                     </div>
