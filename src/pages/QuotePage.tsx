@@ -84,7 +84,7 @@ const QuotePage = () => {
             <CheckCircle className="h-16 w-16 text-accent mx-auto mb-6 animate-bounce" />
             <h2 className="text-3xl font-bold mb-4">Thank You!</h2>
             <p className="text-muted-foreground mb-6">
-              We've received your quote request. Our team will review it and get back to you within 24 hours with a detailed quote.
+              We've received your quote request. Our team will review it and get back to you within 3 hours with a detailed quote.
             </p>
             <div className="bg-secondary/50 rounded-lg p-4 text-left space-y-2 animate-fade-in animation-delay-200">
               <p className="text-sm"><strong>Service:</strong> {formData.serviceType}</p>
