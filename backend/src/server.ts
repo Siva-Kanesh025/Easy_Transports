@@ -6,16 +6,20 @@ import { Resend } from "resend";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+}));
+
 app.use(express.json());
 
-// ENV
 const RESEND_API_KEY = process.env.RESEND_API_KEY!;
-const EMAIL_FROM = process.env.EMAIL_FROM!;       // e.g., support@globaltamillottery.co.uk
-const RECEIVER_EMAIL = process.env.RECEIVER_EMAIL!; 
-const APP_PORT = Number(process.env.PORT || 5000);
+const EMAIL_FROM = process.env.EMAIL_FROM!;
+const RECEIVER_EMAIL = process.env.RECEIVER_EMAIL!;
+const PORT = process.env.PORT || 5000;
 
-// Initialize Resend
 const resend = new Resend(RESEND_API_KEY);
 
 type QuotePayload = {
@@ -34,7 +38,6 @@ type QuotePayload = {
 app.post("/send-quote", async (req: Request, res: Response) => {
   const data = req.body as QuotePayload;
 
-  // Validation
   if (!data.serviceType || !data.pickupPostcode || !data.name || !data.email) {
     return res.status(400).json({ success: false, message: "Missing required fields" });
   }
@@ -51,19 +54,17 @@ app.post("/send-quote", async (req: Request, res: Response) => {
     <p><strong>Name:</strong> ${data.name}</p>
     <p><strong>Email:</strong> ${data.email}</p>
     <p><strong>Phone:</strong> ${data.phone || "-"}</p>
-    <p><strong>Notes:</strong><br/> ${data.notes ? data.notes.replace(/\n/g, "<br/>") : "-"}</p>
+    <p><strong>Notes:</strong><br/> ${data.notes?.replace(/\n/g, "<br/>") || "-"}</p>
   `;
 
   try {
-    const response = await resend.emails.send({
+    await resend.emails.send({
       from: EMAIL_FROM,
       to: RECEIVER_EMAIL,
       subject: `New Quote Request — ${data.serviceType} — ${data.name}`,
       html,
       replyTo: data.email,
     });
-
-    console.log("Email sent:", response);
 
     return res.json({ success: true, message: "Email sent successfully" });
   } catch (error) {
@@ -72,6 +73,6 @@ app.post("/send-quote", async (req: Request, res: Response) => {
   }
 });
 
-app.listen(APP_PORT, () => {
-  console.log(`Email API running on port ${APP_PORT}`);
+app.listen(PORT, () => {
+  console.log(`Email API running on port ${PORT}`);
 });
