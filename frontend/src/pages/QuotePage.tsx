@@ -52,7 +52,7 @@ const QuotePage = () => {
     setIsSubmitting(true);
 
     try {
-      const resp = await fetch("http://localhost:5000/send-quote", {
+      const resp = await fetch("https://porter-affa.onrender.com/send-quote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
