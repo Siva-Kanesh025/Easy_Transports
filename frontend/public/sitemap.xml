@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home Page -->
+  <url>
+    <loc>https://www.easytransports.co.uk/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://www.easytransports.co.uk/about</loc>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.easytransports.co.uk/contact</loc>
+  </url>
+
+  <!-- Quote Page -->
+  <url>
+    <loc>https://www.easytransports.co.uk/quote</loc>
+  </url>
+
+  <!-- Index (if separate page) -->
+  <url>
+    <loc>https://www.easytransports.co.uk/index</loc>
+  </url>
+
+  <!-- NotFound is not included (Google should not index 404 pages) -->
+
+</urlset>
