@@ -290,6 +290,26 @@ const HomePage = () => {
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform" />
             </Link>
           </Button>
+          {/* Trustpilot Widget */}
+          <div className="mt-6">   {/* <-- Added margin for spacing */}
+            <div
+              className="trustpilot-widget"
+              data-locale="en-US"
+              data-template-id="56278e9abfbbba0bdcd568bc"
+              data-businessunit-id="6925862152ba9172aced553b"
+              data-style-height="52px"
+              data-style-width="100%"
+              data-token="529e9470-e464-4ae1-a345-d9207bd110d2"
+            >
+              <a
+                href="https://www.trustpilot.com/review/easytransports.co.uk"
+                target="_blank"
+                rel="noopener"
+              >
+                Trustpilot
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </div>

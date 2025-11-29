@@ -7,8 +7,10 @@ const Footer = () => {
     <footer className="bg-foreground text-background animate-fade-in">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo & Description */}
+          {/* Logo + Trustpilot + Description */}
           <div className="space-y-4">
+
+            {/* Logo */}
             <div className="flex items-center space-x-2 group cursor-pointer">
               <img
                 src={Logo}
@@ -17,6 +19,29 @@ const Footer = () => {
               />
               <span className="text-lg font-bold">Easy Transports</span>
             </div>
+
+            {/* Trustpilot Widget */}
+            <div className="mt-1">
+              <div
+                className="trustpilot-widget"
+                data-locale="en-US"
+                data-template-id="56278e9abfbbba0bdcd568bc"
+                data-businessunit-id="6925862152ba9172aced553b"
+                data-style-height="52px"
+                data-style-width="100%"
+                data-token="529e9470-e464-4ae1-a345-d9207bd110d2"
+              >
+                <a
+                  href="https://www.trustpilot.com/review/easytransports.co.uk"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Trustpilot
+                </a>
+              </div>
+            </div>
+
+            {/* Description */}
             <p className="text-sm text-background/80">
               Reliable vehicle services across London. House moving, pallet removals, skip removals, and man & van services.
             </p>
