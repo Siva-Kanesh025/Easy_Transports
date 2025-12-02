@@ -22,37 +22,37 @@ const HomePage = () => {
       title: "House Moving",
       description: "Complete house relocation services with experienced professionals",
       icon: houseMovingIcon,
-      link: "/quote",
+      link: "/services/house-moving",
     },
     {
       title: "Pallet Removals",
       description: "Efficient pallet transportation for businesses across London",
       icon: palletIcon,
-      link: "/quote",
+      link: "/services/pallet-removals",
     },
     {
       title: "Skip Removals",
       description: "Fast and reliable skip waste removal services",
       icon: skipIcon,
-      link: "/quote",
+      link: "/services/skip-removals",
     },
     {
         title: "Bulk Removals",
         description: "Efficient bulk waste removal for households and businesses",
         icon: bulkIcon,
-        link: "/quote",
+        link: "/services/bulk-removals",
     },
     {
         title: "Courier Services",
         description: "Quick and secure courier deliveries across the city",
         icon: courierIcon,
-        link: "/quote",
+        link: "/services/courier-services",
     },
     {
       title: "Man & Van",
       description: "Flexible man and van hire for all your moving needs",
       icon: manVanIcon,
-      link: "/quote",
+      link: "/services/manvan",
     },
   ];
 
